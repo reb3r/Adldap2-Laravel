@@ -25,7 +25,7 @@ return [
     | performance in big systems.
     |
     */
-    'users_base_dn' => env('USERS_BASE_DN'),
+    'users_base_dn' => env('LDAP_USERS_BASE_DN'),
 
     /*
     |--------------------------------------------------------------------------
