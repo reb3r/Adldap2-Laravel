@@ -133,7 +133,7 @@ class UserResolver implements ResolverInterface
     public function query(): Builder
     {
         $query = $this->getLdapAuthProvider()->search()->users();
-        if (isset(config('ldap_auth.users_base_dn'))) {
+        if (config('ldap_auth.users_base_dn') !== null) {
             $query = $query->in(config('ldap_auth.users_base_dn'));
             $query = $query->listing();
             $query = $query->limit(1);
